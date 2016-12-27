@@ -34,4 +34,13 @@ public class StudentDao {
         return this.students.get(id);
     }
 
+    public void updateStudent(Student student){
+
+        this.students.put(student.getId() ,student);
+    }
+
+    public void removeStudent(Student student){
+        this.students.remove(student.getId());
+    }
+
 }

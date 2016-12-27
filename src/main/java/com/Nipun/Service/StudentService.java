@@ -24,4 +24,11 @@ public class StudentService {
         return this.studentDao.getStudent(id);
     }
 
+    public void updateStudent(Student student){
+        this.studentDao.updateStudent(student);
+    }
+    public void removeStudent(Student student){
+        this.studentDao.removeStudent(student);
+    }
+
 }

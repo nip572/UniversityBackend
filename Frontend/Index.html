@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app = "student">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src= "student.js"> </script>
+</head>
+<body ng-controller="studentController">
+
+<div class="jumbotron text-center">
+    <h1>Welcome to Nini University</h1>
+    <p>This is the best its gonna get</p>
+</div>
+
+<!--<div class="container">
+&lt;!&ndash;    <div class="row">
+        <div class="col-sm-4">
+            <h3>Column 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+    </div>&ndash;&gt;
+
+
+</div>-->
+<div class="container">
+<h3>Enter Name</h3>
+<input type="text" class="form-control" id="usr" ng-model="name"  >
+<h1>Hello {{name}}!</h1>
+</div>
+
+<div class="container">
+    <h2>All Students</h2>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat = "student in students">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.course}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
