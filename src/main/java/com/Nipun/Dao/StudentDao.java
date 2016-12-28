@@ -42,5 +42,8 @@ public class StudentDao {
     public void removeStudent(Student student){
         this.students.remove(student.getId());
     }
+    public void addStudent(Student student){
+        this.students.put(student.getId() , student);
+    }
 
 }
